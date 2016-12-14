@@ -6,7 +6,6 @@ class ProtectedController < ApplicationController
     end
   end
   before_action :require_login
-
     def index
       @student = Student.find(session[:student_id])
     end
