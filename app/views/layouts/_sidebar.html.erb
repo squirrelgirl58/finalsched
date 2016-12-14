@@ -1,9 +1,12 @@
 <div class="sidebar">
-  <ul>
-  <li> <%= link_to "Home", "/" %> </li>
-  <li> <%= link_to "Courses", courses_path %> </li>
-  <li> <%= link_to "Registrations", registrations_path %> </li>
-  <li> <%= link_to "Student Profile", students_path if session[:student_id] %>
-<%= link_to "Login", login_path unless session[:student_id] %> </li>
-  </ul>
+  <h2>Helpful Links</h2>
+  <p>
+    <ul>
+      <li> <%= link_to "Home", "/" %> </li>
+      <li> <%= link_to "Courses", courses_path %> </li>
+      <li> <%= link_to "Registrations", registrations_path %> </li>
+      <li> <%= link_to "Student Profile", students_path if session[:student_id] %>
+        <%= link_to "Login", login_path unless session[:student_id] %> </li>
+    </ul>
+  </p>
 </div>

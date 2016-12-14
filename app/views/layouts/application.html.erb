@@ -3,25 +3,21 @@
   <head>
     <title>Schedule Tracker</title>
     <%= csrf_meta_tags %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<div class="all">
   <body>
     <header>
-      <h1>Schedule Tracker Homepage</h1>
+      <h1>Schedule Tracker</h1>
     </header>
 
     <%= render "layouts/sidebar" %>
 
     <div class="main">
       <%= yield %>
-      <% if session[:netid] %>
-        <%= link_to 'Logout', logout_path %>
-      <% else %>
-        <%= link_to 'Login', login_path %>
-      <% end %>
     </div>
 
     <div class="primary">
@@ -31,10 +27,12 @@
       <% end %>
 
       </div>
+
     <footer>
       <p>
         Welcome to the schedule tracker app!
       </p>
     </footer>
   </body>
+</div>
 </html>
