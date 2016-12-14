@@ -7,8 +7,14 @@ class ProtectedController < ApplicationController
     end
   end
 
-  before_action :require_login
+  def check_admin
+    unless session["admin"]
+      flash[:message] = "Admin access only!"
+      redirect_to home
+    end
+  end
 
+  before_action :require_login
     def index
       @student = Student.find(session[:student_id])
     end
