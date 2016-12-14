@@ -8,5 +8,8 @@ class Professor < ApplicationRecord
   def course_load
     @professor.courses.count
   end
-  
+
+  def to_s
+    l_name
+  end
 end
