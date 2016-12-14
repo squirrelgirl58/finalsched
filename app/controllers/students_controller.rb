@@ -1,5 +1,8 @@
-class StudentsController < ApplicationController
+class StudentsController < ProtectedController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
+  before_action :check_admin
+
   # before_action :check_admin
 
   # GET /students

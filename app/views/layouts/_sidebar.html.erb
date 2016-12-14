@@ -3,10 +3,22 @@
   <p>
     <ul>
       <li> <%= link_to "Home", "/" %> </li>
-      <li> <%= link_to "Courses", courses_path %> </li>
-      <li> <%= link_to "Registrations", registrations_path %> </li>
-      <li> <%= link_to "Student Profile", students_path if session[:student_id] %>
-        <%= link_to "Login", login_path unless session[:student_id] %> </li>
+
+        <% if session[:admin] %>
+          <li><%= "Admin only Links" %></li>
+          <li><%= link_to "Professors", professors_path %></li>
+          <li><%= link_to "Courses", courses_path %></li>
+          <li><%= link_to "Students", students_path %></li>
+
+        <% elsif session[:student_id] %>
+            <li><%= link_to "Registrations", registrations_path %></li>
+            <li><%= link_to "Logout", logout_path %></li>
+        
+        <% else %>
+            <li><%= link_to "Login", login_path %></li>
+        <% end %>
+
+
     </ul>
   </p>
 </div>
