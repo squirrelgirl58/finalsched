@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>F name</th>
-      <th>L name</th>
-      <th>Dept</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Department</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,7 +20,7 @@
         <td><%= professor.dept %></td>
         <td><%= link_to 'Show', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
-        <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

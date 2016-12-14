@@ -1,0 +1,19 @@
+
+  h1 {color: #0040ff; font-size: 2em; padding: 20px 0 0 0; font-weight: 100;}
+  body { font-family: 'Arial', sans-serif; font-size: .90em; padding: 0; margin: 0;  background-color: #b3b3b3;}
+  a { color: #0040ff; text-decoration: none;}
+  li { color: #264d73; list-style-type: none; margin-bottom: 6px; }
+
+
+    .sidebar { width: 210px; float: right; background: #FFF; color: #0040ff; margin-right: 20px; margin-top: 30px; margin-bottom: 10px; background-color: #42f4d7; border-radius: 8px; min-height: 140px;}
+    .sidebar h2 { font-weight: 100; padding: 15px; }
+    .all { background-color: #b3b3b3; padding: 30px 30px 30px 30px}
+
+   .padding {padding:10px}
+   .right {float: right}
+   .left {float: left}
+
+   table.display {
+     width: 100%;
+
+  message-box {float: left; width: 100%; background-color: #ececec; margin-bottom: 20px; text-align: center}

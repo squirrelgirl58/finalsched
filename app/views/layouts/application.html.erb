@@ -8,19 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<div class="all">
   <body>
     <header>
-      <h1>Schedule Tracker Homepage</h1>
+      <h1>Schedule Tracker</h1>
     </header>
+
     <%= render "layouts/sidebar" %>
+
     <div class="main">
       <%= yield %>
-      <% if session[:netid] %>
-        <%= link_to 'Logout', logout_path %>
-      <% else %>
-        <%= link_to 'Login', login_path %>
-      <% end %>
     </div>
+
     <div class="primary">
       <% if flash[:message] %>
         <p class="flash-message">
@@ -28,8 +27,12 @@
       <% end %>
 
       </div>
+
     <footer>
-      <p>This is my footer.</p>
+      <p>
+        Welcome to the schedule tracker app!
+      </p>
     </footer>
   </body>
+</div>
 </html>
