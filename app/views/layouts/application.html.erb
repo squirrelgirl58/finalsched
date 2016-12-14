@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Schedule Tracker</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Schedule Tracker Homepage</h1>
+    </header>
+    <%= render "layouts/sidebar" %>
+    <div class="main">
+      <%= yield %>
+      <% if session[:netid] %>
+        <%= link_to 'Logout', logout_path %>
+      <% else %>
+        <%= link_to 'Login', login_path %>
+      <% end %>
+    </div>
+    <div class="primary">
+      <% if flash[:message] %>
+        <p class="flash-message">
+        <%= flash[:message] %></p>
+      <% end %>
+
+      </div>
+    <footer>
+      <p>This is my footer.</p>
+    </footer>
+  </body>
+</html>

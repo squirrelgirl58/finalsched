@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>C name:</strong>
+  <%= @course.c_name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @course.desc %>
+</p>
+
+<p>
+  <strong>Prof:</strong>
+  <%= @course.professor_id %>
+</p>
+
+<p>
+  <strong>Max enroll:</strong>
+  <%= @course.max_enroll %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
