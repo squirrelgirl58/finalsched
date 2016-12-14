@@ -14,6 +14,6 @@
    .left {float: left}
 
    table.display {
-     width: 100%;
+     width: 100%}
 
   message-box {float: left; width: 100%; background-color: #ececec; margin-bottom: 20px; text-align: center}

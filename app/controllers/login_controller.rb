@@ -8,7 +8,9 @@ class LoginController < ApplicationController
       flash[:message] = "Welcome #{@student.f_name}"
 
       session[:student_id] = @student.id
+      session[:admin] = @student.admin
       redirect_to home_path
+
     else
       flash[:message] = "You have not been logged in. Student can't be found"
       redirect_to login_path
