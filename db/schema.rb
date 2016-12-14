@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20161214165502) do
   create_table "courses", force: :cascade do |t|
     t.string   "c_name"
     t.text     "desc"
-    t.integer  "professor_id"
+    t.integer  "prof_id"
     t.integer  "max_enroll"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
