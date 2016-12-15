@@ -5,8 +5,8 @@ class Professor < ApplicationRecord
 
   scope :by_name, -> { order(:l_name, :f_name) }
 
-  def course_load
-    @professor.courses.count
+  def prof_name
+    "Professor #{l_name}"
   end
 
   def to_s

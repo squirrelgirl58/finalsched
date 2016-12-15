@@ -21,6 +21,11 @@
     <%= f.collection_select :student_id, Student.all, :id, :netid, prompt: true %>
   </div>
 
+  <div class="field">
+    <%= f.label :grade %>
+    <%= f.number_field :grade %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -4,8 +4,8 @@ class Registration < ApplicationRecord
 
   validates :course, :student, presence: true
 
-  def registration_info
-    "#{id_num} #{@Student.f_name} #{@student.l_name} #{@course.c_name}"
+  def grade_format
+    "#{grade}/100"
   end
 
 end

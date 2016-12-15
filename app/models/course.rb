@@ -12,8 +12,13 @@ class Course < ApplicationRecord
     c_name
   end
 
-  def current_enrollment
-      @class.students.count
-  end
+  
+  # def current_enrollment
+  #   current_enrollment = Course.group(:student).count
+  # end
+
+  # def current_enrollment_int
+  #   current_enrollment.delete ""
+  # end
 
 end
