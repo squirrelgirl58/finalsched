@@ -1,9 +1,8 @@
 class StudentsController < ProtectedController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
   before_action :require_login
-  before_action :check_admin
-
   # before_action :check_admin
+
 
   # GET /students
   # GET /students.json
@@ -73,6 +72,6 @@ class StudentsController < ProtectedController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:f_name, :l_name, :grad_yr, :netid, :password)
+      params.require(:student).permit(:f_name, :l_name, :grad_yr, :netid, :password, :admin)
     end
 end
