@@ -8,8 +8,12 @@ class Student < ApplicationRecord
   scope :by_alpha, -> { order(:l_name, :f_name) }
   scope :by_year, -> { order(:grad_yr)}
 
+  def to_s
+    netid
+  end
+
   def net_id
     "#{l_name}#{f_name[0..1]}"
   end
-  
+
 end

@@ -5,6 +5,8 @@
       <li> <%= link_to "Home", "/" %> </li>
 
         <% if session[:admin] %>
+          <li><%= link_to "Registrations", registrations_path %></li>
+          <li><%= link_to "Logout", logout_path %></li>
           <li><%= "Admin only Links" %></li>
           <li><%= link_to "Professors", professors_path %></li>
           <li><%= link_to "Courses", courses_path %></li>
@@ -13,7 +15,7 @@
         <% elsif session[:student_id] %>
             <li><%= link_to "Registrations", registrations_path %></li>
             <li><%= link_to "Logout", logout_path %></li>
-        
+
         <% else %>
             <li><%= link_to "Login", login_path %></li>
         <% end %>

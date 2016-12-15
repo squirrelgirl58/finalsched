@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>Courses</th>
+      <th> <%= @student.f_name %>'s Courses</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -10,7 +10,7 @@
     <% @student.registrations.each do |registration| %>
       <tr>
         <td><%= registration.course %></td>
-
+        <td><%= registration.course.professor %></td>
       </tr>
     <% end %>
   </tbody>

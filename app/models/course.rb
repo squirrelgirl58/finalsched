@@ -8,6 +8,10 @@ class Course < ApplicationRecord
 
   scope :by_name, -> { order(:c_name) }
 
+  def to_s
+    c_name
+  end
+
   def current_enrollment
       @class.students.count
   end
